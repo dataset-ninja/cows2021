@@ -77,6 +77,9 @@ def convert_and_upload_supervisely_project(
                 continue
             else:
                 rectangle = sly.Rectangle(top=top, left=left, bottom=bottom, right=right)
+                if rectangle.area > 2400:
+                    label = sly.Label(rectangle, obj_class)
+                    labels.append(label)
                 label = sly.Label(rectangle, obj_class)
 
             labels.append(label)
@@ -84,7 +87,7 @@ def convert_and_upload_supervisely_project(
         return sly.Annotation(img_size=(img_height, img_width), labels=labels)
 
 
-    obj_class = sly.ObjClass("cow", sly.Rectangle)
+    obj_class = sly.ObjClass("cattle torso", sly.Rectangle)
     subfolder_tag = sly.TagMeta("cow_id", sly.TagValueType.ANY_STRING)
 
     project = api.project.create(workspace_id, project_name, change_name_if_conflict=True)

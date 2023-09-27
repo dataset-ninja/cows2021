@@ -34,7 +34,7 @@ if RELEASE_DATE is None:
 HOMEPAGE_URL: str = "https://data.bris.ac.uk/data/dataset/4vnrca7qw1642qlwxjadp87h7"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = 5131476
+PREVIEW_IMAGE_ID: int = 5181109
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
 GITHUB_URL: str = "https://github.com/dataset-ninja/cows2021"
@@ -62,7 +62,7 @@ ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "University of Bristol"
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://www.bristol.ac.uk/"
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
-SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {"__PRETEXT__":"Additionally, in *identification-test* and *identification-train* splits information about ***cow_id***"}
+SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {"__PRETEXT__":"Additionally, images in *identification-test* and *identification-train* splits contain information about ***cow_id***"}
 TAGS: Optional[List[str]] = None
 
 

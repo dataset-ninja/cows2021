@@ -40,13 +40,16 @@ def convert_and_upload_supervisely_project(
     # project_name = "Open cows 2021"
     dataset_path = "/home/grokhi/rawdata/cows2021/4vnrca7qw1642qlwxjadp87h7/Sub-levels/Detection_and_localisation"
     batch_size = 30
-    ds_name = "ds"
+    # ds_name = "ds"
     images_ext = ".jpg"
     ann_ext = ".xml"
 
 
+
     def create_ann(image_path):
         labels = []
+        if get_file_name(image_path) == "02874":
+            a = 0
 
         ann_path = os.path.join(images_path, get_file_name(image_path) + ann_ext)
 
@@ -80,9 +83,6 @@ def convert_and_upload_supervisely_project(
                 if rectangle.area > 2400:
                     label = sly.Label(rectangle, obj_class)
                     labels.append(label)
-                label = sly.Label(rectangle, obj_class)
-
-            labels.append(label)
 
         return sly.Annotation(img_size=(img_height, img_width), labels=labels)
 
@@ -112,7 +112,7 @@ def convert_and_upload_supervisely_project(
                     if ds_name != "Test":
                         dataset = api.dataset.create(
                             project.id,
-                            "detection_and_localisation-" + ds_subfolder,
+                            "detection_and_localisation-" + ds_subfolder.lower(),
                             change_name_if_conflict=True,
                         )
                     images_names = [
@@ -169,7 +169,7 @@ def convert_and_upload_supervisely_project(
             )
             images_pathes = glob.glob(identification_path + "/*/*.jpg")
 
-        progress = sly.Progress("Create dataset {}".format(ds_name), len(images_pathes))
+        progress = sly.Progress("Create dataset {}".format(dataset.name), len(images_pathes))
 
         for img_pathes_batch in sly.batched(images_pathes, batch_size=batch_size):
             img_names_batch = [

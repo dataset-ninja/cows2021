@@ -31,7 +31,7 @@ RELEASE_DATE: Optional[str] = "2021-06-23"  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
     RELEASE_YEAR: int = None
 
-HOMEPAGE_URL: str = "https://data.bris.ac.uk/data/dataset/4vnrca7qw1642qlwxjadp87h7"
+HOMEPAGE_URL: str = "https://research-information.bris.ac.uk/en/datasets/cows2021-dataset"
 # e.g. "https://some.com/dataset/homepage"
 
 PREVIEW_IMAGE_ID: int = 5181109
@@ -51,12 +51,14 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
+
 PAPER: Optional[Union[str, List[str], Dict[str, str]]] = "https://arxiv.org/abs/2105.01938"
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = "https://github.com/Wormgit/Cows2021"
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"GitHub":"https://github.com/Wormgit/Cows2021"}
 
 CITATION_URL: Optional[str] = "https://data.bris.ac.uk/data/dataset/4vnrca7qw1642qlwxjadp87h7"
 AUTHORS: Optional[List[str]] = ["Neill Campbell", "Tilo Burghardt", "Jing Gao", "William Andrew", "Andrew Dowsey"]
+AUTHORS_CONTACTS: Optional[List[str]] = ["data-bris@bristol.ac.uk"]
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "University of Bristol"
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://www.bristol.ac.uk/"
@@ -110,6 +112,7 @@ def get_settings():
     settings["repository"] = REPOSITORY
     settings["citation_url"] = CITATION_URL
     settings["authors"] = AUTHORS
+    settings["authors_contacts"] = AUTHORS_CONTACTS
     settings["organization_name"] = ORGANIZATION_NAME
     settings["organization_url"] = ORGANIZATION_URL
     settings["slytagsplit"] = SLYTAGSPLIT

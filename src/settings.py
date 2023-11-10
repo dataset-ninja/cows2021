@@ -24,7 +24,7 @@ LICENSE: License = License.NCGL_2_0()
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Livestock()]
 CATEGORY: Category = Category.Livestock(extra=Category.Drones())
 
-CV_TASKS: List[CVTask] = [CVTask.ObjectDetection(), CVTask.Identification()]
+CV_TASKS: List[CVTask] = [CVTask.ObjectDetection(), CVTask.Identification(), CVTask.SelfSupervisedLearning()]
 ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.ObjectDetection()]
 
 RELEASE_DATE: Optional[str] = "2021-06-23"  # e.g. "YYYY-MM-DD"

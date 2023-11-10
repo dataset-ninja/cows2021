@@ -1,4 +1,4 @@
-**Cows2021 Dataset** is a dataset for object detection and identification tasks. It is used in the livestock industry. 
+**Cows2021 Dataset** is a dataset for object detection, identification, and self supervised learning tasks. It is used in the livestock industry. 
 
 The dataset consists of 42422 images with 13178 labeled objects belonging to 1 single class (*cattle torso*).
 

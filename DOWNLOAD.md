@@ -1,6 +1,6 @@
 Dataset **Cows2021** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/1/v/ag/OiVbDpq2H3JrxpdulAmPgaWun1bBPXJuW09d8UrnhjxF5vYe611Q8yQmYqKjZR476laP5lrIVL8WgCQ60eVCfjicEQyYYMFj0QQhaoeS5FFnfxTQv4kGyIwZBh2Q.tar)
+ [Download](https://www.dropbox.com/scl/fi/2au8z3yknn343r19g55ey/cows2021-DatasetNinja.tar?rlkey=n6aqsqbcvndeim5qo39gld1te&dl=1)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
